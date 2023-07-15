@@ -2,14 +2,13 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-
-
+//middlewares
 app.use(cors);
 app.use(express.json());
 
-app.use("/", () => {
-    return response.status(200).json({message: "I am live"});
+//testing the server response
+app.get("/", (request, response) => {
+  response.status(200).json({ message: "Weather Application is live" });
 });
-
 
 module.exports = app;

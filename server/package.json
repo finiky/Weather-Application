@@ -2,7 +2,7 @@
   "scripts": {
     "start": "node index.js",
     "start:dev": "nodemon --inspect=0.0.0.0:9229 index.js",
-    "test": "jest --watchAll --colors --verbose",
+    "test": "jest --watchAll --colors --verbose"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -11,5 +11,12 @@
   },
   "devDependencies": {
     "jest": "^29.6.1"
-  }
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
