@@ -1,6 +1,5 @@
 const request = require("supertest");
 const app = require("./app");
-const express = require("express");
 
 describe("Given that the '/getweather/zipid/countryid' route exists", () => {
   test("That the api responds with the weather data and 200 status", async () => {
