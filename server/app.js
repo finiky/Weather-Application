@@ -1,12 +1,11 @@
 const express = require("express");
 const app = express();
+const getweather = require("./router");
 
 //middlewares
 app.use(express.json());
 
-//testing the server response
-app.get("/", (req, res) => {
-  res.send("Welcome to the Weather App!");
-});
+//get weather api
+app.use("/", getweather);
 
 module.exports = app;
