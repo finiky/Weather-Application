@@ -4,6 +4,10 @@ const router = express.Router();
 router.get("/getweather/:zipid/:countryid", async (request, response, next) => {
   try {
     const { zipid, countryid } = request.params;
+
+    //add logic for sending an error response if the zipid contains a letter
+    // add logic for sending an error response if the countryid contains a number
+    // this check in the start itself can save from making an api call and save time by providing a faster response
     let data = await fetch(
       `https://api.openweathermap.org/geo/1.0/zip?zip=${zipid},${countryid}&appid=2247808d1c169cf4f00e6f20b7cbcad8`
     );
