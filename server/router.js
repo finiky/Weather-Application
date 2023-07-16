@@ -12,7 +12,11 @@ router.get("/getweather/:zipid/:countryid", async (request, response, next) => {
       `https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lon}&appid=2247808d1c169cf4f00e6f20b7cbcad8`
     );
     weather = await weather.json();
-    response.status(200).json({ weather });
+    if (weather.cod === 200) {
+      response.status(200).json({ weather });
+    } else {
+      response.status(400).json({ message: "Invalid or Incorrect request" });
+    }
   } catch (error) {
     next(error);
   }
