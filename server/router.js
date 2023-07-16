@@ -13,7 +13,7 @@ router.get("/getweather/:zipid/:countryid", async (request, response, next) => {
     );
     weather = await weather.json();
     if (weather.cod === 200) {
-      response.status(200).json({ weather });
+      response.status(200).json(weather);
     } else {
       response.status(400).json({ message: "Invalid or Incorrect request" });
     }
