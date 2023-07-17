@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <form onSubmit={handleSubmit()}>
       <div>
-        <lablel>Zip Code:</lablel>
+        <label htmlFor="zip">Zip Code:</label>
         <input
           id="zip"
           type="text"
@@ -18,7 +18,7 @@ const Home = () => {
         />
       </div>
       <div>
-        <lablel>Country Code:</lablel>
+        <label htmlFor="country">Country Code:</label>
         <input
           id="country"
           type="text"
