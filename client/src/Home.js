@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import styles from "./Home.module.css";
 const Home = () => {
   const [zip, setZip] = useState();
   const [country, setCountry] = useState();
@@ -8,29 +9,38 @@ const Home = () => {
     navigate(`/getweather/${zip}/${country}`);
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="zip">Zip Code:</label>
+    <div>
+    <h1 className={styles.name}>Weather Teller</h1>
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <div className={styles.child}>
+        <label htmlFor="zip">Zip Code</label>
         <input
+          className={styles.input}
           id="zip"
           type="text"
           value={zip}
+          placeholder="Zip Code"
           required
           onChange={(e) => setZip(e.target.value)}
         />
       </div>
-      <div>
-        <label htmlFor="country">Country Code:</label>
+      <div className={styles.child}>
+        <label htmlFor="country">Country Code</label>
         <input
+          className={styles.input}
           id="country"
           type="text"
           value={country}
+          placeholder="Country Code"
           required
           onChange={(e) => setCountry(e.target.value)}
         />
       </div>
-      <button type="submit">Get Weather Information</button>
+      <div className={styles.child}>
+        <button className={styles.input} type="submit">Submit</button>
+      </div>
     </form>
+    </div>
   );
 };
 

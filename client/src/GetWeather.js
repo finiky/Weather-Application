@@ -6,7 +6,7 @@ const GetWeather = () => {
   const [weather, setWeather] = useState({});
   const [isLoading, setIssLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [status, setStatus] = useState();
+  const [status, setStatus] = useState("");
   const [msg, setMsg] = useState("");
   useEffect(() => {
     const getData = async () => {
@@ -41,7 +41,6 @@ const GetWeather = () => {
       <h4>{weather.main.temp}</h4>
       <h5>{weather.main.feels_like}</h5>
       <h6>{weather.main.pressure}</h6>
-      <h7>{weather.main.humidity}</h7>
     </>
   );
 };
