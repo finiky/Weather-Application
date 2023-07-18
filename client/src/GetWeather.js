@@ -6,6 +6,8 @@ const GetWeather = () => {
   const [weather, setWeather] = useState({});
   const [isLoading, setIssLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [status, setStatus] = useState();
+  const [msg, setMsg] = useState("");
   useEffect(() => {
     const getData = async () => {
       const response = await fetch(
@@ -17,8 +19,11 @@ const GetWeather = () => {
         setIssLoading(false);
       }
       if (!response.ok) {
+        const data = await response.json();
         setIssLoading(false);
         setError(true);
+        setStatus(response.status);
+        setMsg(data.message);
       }
     };
     getData();
@@ -27,7 +32,7 @@ const GetWeather = () => {
     return <p>Content is loading...</p>;
   }
   if (error) {
-    return <p>Error loading the content</p>;
+    return <p>{`Error loading the content. Error ${status}. ${msg}`}</p>;
   }
   return (
     <>
