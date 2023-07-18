@@ -37,7 +37,7 @@ const Home = () => {
         />
       </div>
       <div className={styles.child}>
-        <button className={styles.input} type="submit">Submit</button>
+        <button className={styles.input} type="submit">Click</button>
       </div>
     </form>
     </div>
