@@ -16,18 +16,26 @@
   background-color: rgb(192, 212, 167);
 }
 .child {
-  margin: 0.5rem auto;
+  margin: 0.75rem auto;
   width: 40%;
   text-align: center;
   font-weight: bolder;
   font-size: 1.15rem;
   color: rgb(34, 94, 120);
 }
-.input {
+.input,
+.button {
   margin: 0.25rem auto;
-  width: 90%;
+  width: 95%;
   text-align: center;
   font-size: 1rem;
   color: rgb(34, 94, 120);
+  margin-bottom: 0.75rem;
+}
 
+.button {
+  border: 3px solid rgb(34, 94, 120);
+  font-weight: bold;
+  background-color: rgb(192, 212, 167);
+  width: 100%;
 }

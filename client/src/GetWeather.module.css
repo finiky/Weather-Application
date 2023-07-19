@@ -1,0 +1,19 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 3rem;
+  padding: 2rem;
+  color: rgb(34, 94, 120);
+  background-color: rgb(192, 212, 167);
+}
+.data {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+  justify-items: center;
+  padding: 0;
+  list-style-type: none;
+  font-size: larger;
+  font-weight: bold;
+}

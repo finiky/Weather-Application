@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
+import styles from "./GetWeather.module.css";
 const GetWeather = () => {
   const { zipid, countryid } = useParams();
   const [weather, setWeather] = useState({});
@@ -29,19 +29,25 @@ const GetWeather = () => {
     getData();
   }, [zipid, countryid]);
   if (isLoading) {
-    return <p>Content is loading...</p>;
+    return <p className={styles.loading}>Content is loading...</p>;
   }
   if (error) {
-    return <p>{`Error loading the content. Error ${status}. ${msg}`}</p>;
+    return (
+      <p
+        className={styles.error}
+      >{`Error loading the content. Error ${status}. ${msg}`}</p>
+    );
   }
   return (
-    <>
-      <h2>{weather.weather[0].main}</h2>
-      <h3>{weather.weather[0].description}</h3>
-      <h4>{weather.main.temp}</h4>
-      <h5>{weather.main.feels_like}</h5>
-      <h6>{weather.main.pressure}</h6>
-    </>
+    <div className={styles.main}>
+      <h2 className={styles.heading}>Weather Report</h2>
+      <ul className={styles.data}>
+        <li className={styles.items}>Weather: {weather.weather[0].main}</li>
+        <li className={styles.items}>Temperature: {weather.main.temp}</li>
+        <li className={styles.items}>Pressure: {weather.main.pressure}</li>
+        <li className={styles.items}>Humidity: {weather.main.humidity}</li>
+      </ul>
+    </div>
   );
 };
 
