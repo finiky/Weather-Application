@@ -3,6 +3,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
   margin: 3rem;
+  margin-top: 6rem;
   padding: 2rem;
   color: rgb(34, 94, 120);
   background-color: rgb(192, 212, 167);
@@ -19,4 +20,8 @@
 }
 .items {
   padding: 0.25rem;
+}
+
+@media only screen and (min-width: 34rem) {
+ 
 }

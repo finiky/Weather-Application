@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import styles from "./GetWeather.module.css";
 const GetWeather = () => {
   const { zipid, countryid } = useParams();
@@ -47,6 +47,7 @@ const GetWeather = () => {
         <li className={styles.items}>Pressure: {weather.main.pressure}</li>
         <li className={styles.items}>Humidity: {weather.main.humidity}</li>
       </ul>
+      <Link to="/" className={styles.link} > &larr; Home</Link>
     </div>
   );
 };

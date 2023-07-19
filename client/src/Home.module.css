@@ -33,17 +33,18 @@
 }
 
 .button {
-  border: 0.1rem solid rgb(34, 94, 120);
-  border-radius: 3px;
-  font-weight: bold;
-  background-color: rgb(192, 212, 167);
-  width: 97%;
   margin-top: 1rem;
-}
-
-.button:hover {
+  border: 0.1rem solid rgb(34, 94, 120);
+  border-radius: 10px;
+  font-weight: bold;
   background-color: rgb(34, 94, 120);
   color: white;
+  box-shadow: 0 9px #999;
+}
+
+.button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 @media only screen and (min-width: 34rem) {
