@@ -10,7 +10,7 @@ const Home = () => {
   };
   return (
     <div>
-    <h1 className={styles.name}>Weather Teller</h1>
+    <h1 className={styles.name}>Weather Agent</h1>
     <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.child}>
         <label htmlFor="zip">Zip Code</label>
@@ -37,7 +37,7 @@ const Home = () => {
         />
       </div>
       <div className={styles.child}>
-        <button className={styles.button} type="submit">Weather</button>
+        <button className={styles.button} type="submit">Weather Report</button>
       </div>
     </form>
     </div>

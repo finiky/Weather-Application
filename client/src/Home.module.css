@@ -30,12 +30,37 @@
   text-align: center;
   font-size: 1rem;
   color: rgb(34, 94, 120);
-  margin-bottom: 0.75rem;
 }
 
 .button {
-  border: 3px solid rgb(34, 94, 120);
+  border: 0.1rem solid rgb(34, 94, 120);
+  border-radius: 3px;
   font-weight: bold;
   background-color: rgb(192, 212, 167);
-  width: 100%;
+  width: 97%;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  background-color: rgb(34, 94, 120);
+  color: white;
+}
+
+@media only screen and (min-width: 34rem) {
+  .name {
+    font-size: 3rem;
+  }
+  .child {
+    font-size: 1.75rem;
+  }
+  .input,
+  .button {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .form {
+    width: 50%;
+  }
 }
