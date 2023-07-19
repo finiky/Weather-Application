@@ -43,11 +43,16 @@ const GetWeather = () => {
       <h2 className={styles.heading}>Weather Report</h2>
       <ul className={styles.data}>
         <li className={styles.items}>Description: {weather.weather[0].main}</li>
-        <li className={styles.items}>Temperature: {weather.main.temp}</li>
+        <li className={styles.items}>
+          Temperature: {weather.main.temp - 273.15} °C
+        </li>
         <li className={styles.items}>Pressure: {weather.main.pressure}</li>
         <li className={styles.items}>Humidity: {weather.main.humidity}</li>
       </ul>
-      <Link to="/" className={styles.link} > &larr; Home</Link>
+      <Link to="/" className={styles.link}>
+        {" "}
+        Home
+      </Link>
     </div>
   );
 };
