@@ -1,0 +1,67 @@
+.name {
+  color: rgb(34, 94, 120);
+  text-align: center;
+  padding: 3rem;
+  margin: 0;
+  background-color: rgb(192, 212, 167);
+}
+.form {
+  margin: 7rem auto;
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  width: 80%;
+  background-color: rgb(192, 212, 167);
+}
+.child {
+  margin: 0.75rem auto;
+  width: 40%;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.15rem;
+  color: rgb(34, 94, 120);
+}
+.input,
+.button {
+  margin: 0.25rem auto;
+  width: 95%;
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(34, 94, 120);
+}
+
+.button {
+  margin-top: 1rem;
+  border: 0.1rem solid rgb(34, 94, 120);
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: rgb(34, 94, 120);
+  color: white;
+  box-shadow: 0 9px #999;
+}
+
+.button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+@media only screen and (min-width: 34rem) {
+  .name {
+    font-size: 3rem;
+  }
+  .child {
+    font-size: 1.75rem;
+  }
+  .input,
+  .button {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .form {
+    width: 50%;
+  }
+}
