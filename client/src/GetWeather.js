@@ -42,6 +42,7 @@ const GetWeather = () => {
     <div className={styles.main}>
       <h2 className={styles.heading}>Weather Report</h2>
       <ul className={styles.data}>
+        <li className={styles.items}>City: {weather.name}</li>
         <li className={styles.items}>Description: {weather.weather[0].main}</li>
         <li className={styles.items}>
           Temperature: {weather.main.temp - 273.15} °C
