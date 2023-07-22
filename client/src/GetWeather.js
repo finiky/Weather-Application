@@ -8,6 +8,8 @@ const GetWeather = () => {
   const [error, setError] = useState(false);
   const [status, setStatus] = useState("");
   const [msg, setMsg] = useState("");
+  const time = new Date().toLocaleString();
+  console.log(time);
   useEffect(() => {
     const getData = async () => {
       const response = await fetch(
@@ -41,6 +43,7 @@ const GetWeather = () => {
   return (
     <div className={styles.main}>
       <h2 className={styles.heading}>Weather Report</h2>
+      <p className={styles.time}>Date, Time: {time}</p>
       <ul className={styles.data}>
         <li className={styles.items}>City: {weather.name}</li>
         <li className={styles.items}>Description: {weather.weather[0].main}</li>
