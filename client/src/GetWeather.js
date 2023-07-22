@@ -9,7 +9,6 @@ const GetWeather = () => {
   const [status, setStatus] = useState("");
   const [msg, setMsg] = useState("");
   const time = new Date().toLocaleString();
-  console.log(time);
   useEffect(() => {
     const getData = async () => {
       const response = await fetch(
