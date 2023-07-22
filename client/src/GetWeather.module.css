@@ -57,14 +57,16 @@
 
 @media only screen and (min-width: 64rem) {
   .main {
-    width: 60%;
+    width: 50%;
     margin: 6rem auto;
     padding-top: 0.5rem;
   }
   .data {
+    margin: 0;
     row-gap: 0.5rem;
   }
   .link {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
 }
