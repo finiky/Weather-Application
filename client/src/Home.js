@@ -2,10 +2,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Home.module.css";
 const Home = () => {
-  const [zip, setZip] = useState();
-  const [country, setCountry] = useState();
+  const [zip, setZip] = useState("");
+  const [country, setCountry] = useState("");
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     navigate(`/getweather/${zip}/${country}`);
   };
   return (
