@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { fireEvent } from "@testing-library/react";
+import GetWeather from './GetWeather';
 import Home from "./Home";
 
 describe("Home component has rendered correctly", () => {
