@@ -2,13 +2,13 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  margin: 2.25rem;
-  margin-top: 6rem;
-  padding: 2rem;
+  margin: 4rem 2rem;
+  padding: 3rem 1rem;
   color: rgb(34, 94, 120);
   background-color: rgb(192, 212, 167);
 }
 .heading {
+  margin-top: 0;
   text-decoration: underline;
 }
 .data {
@@ -22,16 +22,15 @@
   font-weight: bold;
 }
 .items {
-  padding: 0.25rem;
+  padding: 0.125rem;
 }
 .link {
-  padding: 0.4rem;
+  padding: 0.5rem;
   border: 2px solid rgb(34, 94, 120);
   border-radius: 10px;
   text-decoration: none;
   color: white;
   background-color: rgb(34, 94, 120);
-  margin: 2rem;
   box-shadow: 9px 9px #999;
   font-weight: bold;
   font-size: larger;
@@ -41,30 +40,43 @@
   transform: translateY(6px);
   transform: translateX(6px);
 }
+.time {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
 
 @media only screen and (min-width: 34rem) {
-  .main {
-    margin: 6rem;
-  }
   .heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin: 1rem;
   }
   .data,
-  .link {
-    font-size: 2.5rem;
+  .link, .time {
+    font-size: 2rem;
+  }
+  .main {
+    margin:6rem ;
+  }
+  .data {
+    padding: 2rem;
+    margin: 0;
+    row-gap: 1.5rem;
   }
 }
 
 @media only screen and (min-width: 64rem) {
   .main {
-    width: 60%;
+    width: 50%;
     margin: 6rem auto;
     padding-top: 0.5rem;
   }
-  .data {
-    row-gap: 0.5rem;
+  .heading {
+    padding: 2rem;
   }
-  .link {
-    margin-top: 0.5rem;
+  .time {
+    font-size: 1.5rem;
   }
 }
