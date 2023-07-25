@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import styles from "./GetWeather.module.css";
+import getData from "./Api";
 const GetWeather = () => {
   const { zipid, countryid } = useParams();
   const [weather, setWeather] = useState({});
@@ -10,24 +11,15 @@ const GetWeather = () => {
   const [msg, setMsg] = useState("");
   const time = new Date().toLocaleString();
   useEffect(() => {
-    const getData = async () => {
-      const response = await fetch(
-        `http://localhost:5000/getweather/${zipid}/${countryid}`
-      );
-      if (response.ok) {
-        const data = await response.json();
-        setWeather(data);
-        setIssLoading(false);
-      }
-      if (!response.ok) {
-        const data = await response.json();
-        setIssLoading(false);
-        setError(true);
-        setStatus(response.status);
-        setMsg(data.message);
-      }
-    };
-    getData();
+    getData(
+      setWeather,
+      setIssLoading,
+      setError,
+      setStatus,
+      setMsg,
+      zipid,
+      countryid
+    );
   }, [zipid, countryid]);
   if (isLoading) {
     return <p className={styles.loading}>Content is loading...</p>;
