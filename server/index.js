@@ -1,8 +1,9 @@
 const app = require("./app");
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, (error) => {
+const dotenv = require("dotenv").config();
+const port = process.env.PORT || 5000;
+app.listen(port, (error) => {
   if (error) {
     console.log(error);
   }
-  console.log("Listening at 5000");
+  console.log("Listening at port", port);
 });
