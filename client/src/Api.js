@@ -6,9 +6,9 @@ const getData = async (
   setStatus,
   zipid,
   countryid
-) => { 
+) => {
   const response = await fetch(
-    `http://localhost:5000/getweather/${zipid}/${countryid}`
+    `http://localhost:10000/getweather/${zipid}/${countryid}`
   );
   if (response.ok) {
     const data = await response.json();
