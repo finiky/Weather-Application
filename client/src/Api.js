@@ -7,9 +7,7 @@ const getData = async (
   zipid,
   countryid
 ) => {
-  const response = await fetch(
-    `http://localhost:10000/getweather/${zipid}/${countryid}`
-  );
+  const response = await fetch(`${process.env.API_URL}/${zipid}/${countryid}`);
   if (response.ok) {
     const data = await response.json();
     setWeather(data);
