@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const getweatherRouter = require("./router");
+const getweatherRouter = require("./router.cjs");
 
 //middlewares
 app.use(cors());
