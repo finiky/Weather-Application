@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const dotenv = require("dotenv").config();
-import fetch from "node-fetch";
+const fetch = require("node-fetch");
 router.get("/getweather/:zipid/:countryid", async (request, response) => {
   const { zipid, countryid } = request.params;
   let data = await fetch(
