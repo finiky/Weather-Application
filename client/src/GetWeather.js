@@ -5,7 +5,7 @@ import getData from "./Api";
 const GetWeather = () => {
   const { zipid, countryid } = useParams();
   const [weather, setWeather] = useState({});
-  const [isLoading, setIssLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
   const [status, setStatus] = useState("");
   const [msg, setMsg] = useState("");
@@ -13,7 +13,7 @@ const GetWeather = () => {
   useEffect(() => {
     getData(
       setWeather,
-      setIssLoading,
+      setIsLoading,
       setError,
       setStatus,
       setMsg,
